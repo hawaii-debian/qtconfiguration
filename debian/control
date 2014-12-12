@@ -1,0 +1,36 @@
+Source: qtconfiguration
+Section: misc
+Priority: optional
+Maintainer: Rohan Garg <rohangarg@kubuntu.org>
+Build-Depends: debhelper (>= 9), cmake,
+ qtbase5-dev,
+ pkg-config,
+ libdconf-dev,
+ qtdeclarative5-dev
+Standards-Version: 3.9.5
+Homepage: http://www.maui-project.org/
+
+Package: libqtconfiguration0.3.0
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: <insert up to 60 chars description>
+ <insert long description, indented with spaces>
+
+Package: libqtconfiguration-dev
+Architecture: any
+Depends: libqtconfiguration0.3.0 (= ${binary:Version}), ${shlibs:Depends}, ${misc:Depends}
+Description: development header files for libqtconfiguration
+ This package installs the development header files for libqtconfiguration
+
+Package: libqtconfiguration-dbg
+Section: debug
+Architecture: any
+Depends: libqtconfiguration0.3.0 (= ${binary:Version}), ${misc:Depends}
+Description: qtconfiguration -- debug package
+ Debug package for the qtconfiguration package
+
+Package: qml-module-hawaii-configuration
+Architecture: any
+Depends: libqtconfiguration0.3.0 (= ${binary:Version}), ${shlibs:Depends}, ${misc:Depends}
+Description: QML module provided by qtconfiguration
+ QML integration module provided by qtconfiguration
